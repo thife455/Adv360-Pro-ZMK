@@ -2,7 +2,6 @@
 #include <dt-bindings/zmk/backlight.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/rgb.h>
 
 / {
@@ -79,11 +78,11 @@
 
         layer_4 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans          &trans  &trans                                      &trans  &trans  &trans                &trans                 &trans          &trans           &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &trans                                      &trans  &trans  &trans                &trans                 &trans          &trans           &trans
-&trans  &trans  &trans  &trans  &kp UNDERSCORE  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &kp LEFT_PARENTHESIS  &kt RIGHT_PARENTHESIS  &kp LEFT_BRACE  &kp RIGHT_BRACE  &trans
-&trans  &trans  &trans  &trans  &trans          &trans                  &trans      &trans                  &trans  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &trans          &trans           &trans
-&trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans      &trans  &trans  &trans          &trans                &trans                 &trans          &trans           &trans
+&trans  &trans                &trans                 &trans         &trans            &trans  &trans                                      &trans  &trans  &trans            &trans             &trans          &trans           &trans
+&trans  &trans                &trans                 &trans         &trans            &trans  &trans                                      &trans  &trans  &trans            &trans             &trans          &trans           &trans
+&trans  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans         &kp UNDERSCORE    &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &kp MINUS         &trans             &kp LEFT_BRACE  &kp RIGHT_BRACE  &trans
+&trans  &trans                &trans                 &kp LESS_THAN  &kp GREATER_THAN  &trans                  &trans      &trans                  &trans  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp PIPE        &trans           &trans
+&trans  &trans                &trans                 &trans         &trans                    &trans  &trans  &trans      &trans  &trans  &trans          &trans            &trans             &trans          &trans           &trans
             >;
         };
     };
