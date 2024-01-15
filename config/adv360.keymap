@@ -28,6 +28,15 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
+
+        hold_tap: hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOLD_TAP";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
     };
 
     macros {
@@ -38,11 +47,11 @@
 
         default_layer {
             bindings = <
-&kp EQUAL  &kp N1                &kp N2                 &kp N3          &kp N4           &kp N5  &tog 1                                                               &mo 3      &kp N6  &kp N7          &kp N8     &kp N9    &kp N0    &kp MINUS
-&kp TAB    &kp Q                 &kp W                  &kp E           &kp R            &kp T   &none                                                                &none      &kp Y   &kp U           &kp I      &kp O     &kp P     &kp BSLH
-&kp ESC    &kp A                 &kp S                  &kp D           &kp F            &kp G   &none     &kp LEFT_COMMAND  &kp LALT       &kp LGUI       &kp RCTRL  &none      &kp H   &kp J           &kp K      &kp L     &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z                 &kp X                  &kp C           &kp V            &kp B                               &lt 4 F10      &kp RIGHT_ALT                        &kp N   &kp M           &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
-&mo 2      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LEFT_BRACE  &kp RIGHT_BRACE          &kp BSPC  &kp ESC           &lt 5 B        &kp PG_DN      &kp ENTER  &kp SPACE          &kp UNDERSCORE  &kp MINUS  &kp LBKT  &kp RBKT  &mo 2
+&kp EQUAL  &kp N1     &kp N2     &kp N3                                 &kp N4                             &kp N5  &tog 1                                                               &mo 3      &kp N6  &kp N7                         &kp N8                            &kp N9    &kp N0    &kp MINUS
+&kp TAB    &kp Q      &kp W      &kp E                                  &kp R                              &kp T   &none                                                                &none      &kp Y   &kp U                          &kp I                             &kp O     &kp P     &kp BSLH
+&kp ESC    &kp A      &kp S      &kp D                                  &kp F                              &kp G   &none     &kp LEFT_COMMAND  &kp LALT       &kp LGUI       &kp RCTRL  &none      &kp H   &kp J                          &kp K                             &kp L     &kp SEMI  &kp SQT
+&kp LSHFT  &kp Z      &kp X      &kp C                                  &kp V                              &kp B                               &lt 4 F10      &kp RIGHT_ALT                        &kp N   &kp M                          &kp COMMA                         &kp DOT   &kp FSLH  &kp RSHFT
+&mo 2      &kp UNDER  &kp MINUS  &hold_tap LEFT_PARENTHESIS LEFT_ARROW  &hold_tap RIGHT_PARENTHESIS RIGHT          &kp BSPC  &kp ESC           &lt 5 B        &kp PG_DN      &kp ENTER  &kp SPACE          &hold_tap LEFT_BRACE UP_ARROW  &hold_tap RIGHT_BRACE DOWN_ARROW  &kp LBKT  &kp RBKT  &mo 2
             >;
         };
 
